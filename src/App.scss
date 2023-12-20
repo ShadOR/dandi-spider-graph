@@ -1,0 +1,69 @@
+.app {
+  background-color: #171719;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    width: 480px;
+    height: 484px;
+    padding: 16px;
+
+    .label {
+      font-size: 14px;
+      color: #F2F2FB;
+      margin-bottom: 10px;
+    }
+
+    .legend {
+      float: right;
+      display: flex;
+      height: 20px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background: #111112;
+      margin-bottom: 10px;
+
+      .name {
+        color: #F2F2FB;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0 4px;
+
+        &:first-of-type {
+          margin-left: 8px;
+        }
+        &:last-of-type {
+          margin-right: 8px;
+        }
+
+        .dot {
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+          display: inline-block;
+          margin: 0 4px 2px 0;
+        }
+      }
+    }
+
+    .path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+      animation: dash 1s linear;
+    }
+
+    @keyframes dash {
+      from {
+        stroke-dashoffset: 1000;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+}
