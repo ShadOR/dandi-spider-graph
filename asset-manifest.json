@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dandi-spider-graph/static/css/main.ab8a2568.css",
+    "main.js": "/dandi-spider-graph/static/js/main.9ecb9190.js",
+    "static/js/787.b5e6b6c1.chunk.js": "/dandi-spider-graph/static/js/787.b5e6b6c1.chunk.js",
+    "index.html": "/dandi-spider-graph/index.html",
+    "main.ab8a2568.css.map": "/dandi-spider-graph/static/css/main.ab8a2568.css.map",
+    "main.9ecb9190.js.map": "/dandi-spider-graph/static/js/main.9ecb9190.js.map",
+    "787.b5e6b6c1.chunk.js.map": "/dandi-spider-graph/static/js/787.b5e6b6c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab8a2568.css",
+    "static/js/main.9ecb9190.js"
+  ]
+}
