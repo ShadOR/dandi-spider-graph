@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import SpiderGraph from './components/SpiderGraph';
+import DotMenu from './components/DotMenu';
 
 import './App.scss';
 
@@ -18,12 +19,12 @@ function App() {
       color: 'rgba(255, 233, 154, 1)',
     }
   ]
-  const categories = ['Promotion rate', 'Performance score', 'Comp', 'Age', 'Engagement score', 'Manager rating'];
+  const categories = ['Promotion rate', 'Perf.score', 'Comp', 'Age', 'Engagement score', 'Manager rating'];
 
   return (
     <div className="app">
       <div className="container">
-        <div className="label">Engineering attrition attributes</div>
+        <div className="label">Engineering attrition attributes<DotMenu /></div>
         <div className="legend">{
           datasets.map((set, i) => (
             <div

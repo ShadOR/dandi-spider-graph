@@ -1,0 +1,47 @@
+$dotMenu-size: 19px;
+$dotMenu-dot-size: calc($dotMenu-size / 6);
+$dotMenu-dot-size-margin: calc($dotMenu-size / 2) - calc($dotMenu-dot-size / 2);
+@mixin dotMenu-circle {
+  content: "";
+  position: absolute;
+  width: $dotMenu-dot-size;
+  height: $dotMenu-dot-size;
+  border-radius: $dotMenu-dot-size;
+  background-color: rgba(242, 242, 242, 0.3);
+  ;
+  transition: .8s;
+}
+
+.dotMenu {
+  position: relative;
+  display: inline;
+  float: inline-end;
+
+}
+
+.dotMenuLabel:before,
+.dotMenuLabel:after {
+  @include dotMenu-circle;
+  left: $dotMenu-dot-size-margin;
+  transition: .2s;
+}
+
+.dotMenuLabel:after {
+  top: $dotMenu-size - calc($dotMenu-size / 3);
+}
+
+.dotMenuLabel:before {
+  top: $dotMenu-dot-size;
+}
+
+.dotMenuLabel {
+  cursor: pointer;
+  width: $dotMenu-size;
+  height: $dotMenu-size;
+  display: block;
+  span:before {
+    @include dotMenu-circle;
+    left: $dotMenu-dot-size-margin;
+    top: $dotMenu-dot-size-margin;
+  }
+}
