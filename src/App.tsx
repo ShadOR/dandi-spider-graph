@@ -17,26 +17,25 @@ function App() {
       name: 'Exits',
       attributes: [45, 70, 60, 65, 15, 45],
       color: 'rgba(255, 233, 154, 1)',
-    }
-  ]
+    },
+  ];
   const categories = ['Promotion rate', 'Perf.score', 'Comp', 'Age', 'Engagement score', 'Manager rating'];
 
   return (
     <div className="app">
       <div className="container">
-        <div className="label">Engineering attrition attributes<DotMenu /></div>
-        <div className="legend">{
-          datasets.map((set, i) => (
-            <div
-              key={i}
-              className="name"
-              onMouseEnter={() => setHovered(i + 1)}
-              onMouseLeave={() => setHovered(0)}
-            >
-              <span className="dot" style={{ backgroundColor: set.color }}></span>{set.name}
+        <div className="label">
+          Engineering attrition attributes
+          <DotMenu />
+        </div>
+        <div className="legend">
+          {datasets.map((set, i) => (
+            <div key={i} className="name" onMouseEnter={() => setHovered(i + 1)} onMouseLeave={() => setHovered(0)}>
+              <span className="dot" style={{ backgroundColor: set.color }}></span>
+              {set.name}
             </div>
-          ))
-        }</div>
+          ))}
+        </div>
         <SpiderGraph datasets={datasets} categories={categories} hovered={hovered} />
       </div>
     </div>
